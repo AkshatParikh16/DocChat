@@ -186,7 +186,7 @@ Interactive docs at **http://localhost:8000/docs**
 | Vector DB | Pinecone Serverless |
 | Keyword Search | BM25 (Okapi variant) |
 | Document Parsing | PyMuPDF, python-docx |
-| Frontend | HTML / CSS / Vanilla JS |
+| Frontend | HTML / CSS|
 
 ---
 
