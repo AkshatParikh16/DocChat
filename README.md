@@ -13,15 +13,15 @@
   <img src="https://img.shields.io/badge/FastAPI-0.110-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/LLaMA3-Ollama-black?style=for-the-badge&logo=meta&logoColor=white" />
   <img src="https://img.shields.io/badge/Pinecone-Vector_DB-6C2DC7?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#how-it-works">How It Works</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#api">API</a> •
-  <a href="#tech-stack">Tech Stack</a>
+  <a href="#-demo">Demo</a> •
+  <a href="#-features">Features</a> •
+  <a href="#️-how-it-works">How It Works</a> •
+  <a href="#-getting-started">Getting Started</a> •
+  <a href="#-api">API</a> •
+  <a href="#️-tech-stack">Tech Stack</a>
 </p>
 
 ---
@@ -34,10 +34,47 @@ It never guesses. If the answer isn't in your policy, it tells you that.
 
 ---
 
-## Features
+## 🎬 Demo
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/ss1.png" width="100%" />
+      <br><sub><b>Landing Page</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/ss2.png" width="100%" />
+      <br><sub><b>Platform Modules</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/ss3.png" width="100%" />
+      <br><sub><b>Policy Analysis</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/ss4.png" width="100%" />
+      <br><sub><b>Policy Comparison</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/ss5.png" width="100%" />
+      <br><sub><b>Multi-Document Chat</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/ss6.png" width="100%" />
+      <br><sub><b>Architecture</b></sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## ✨ Features
 
 - 📄 **Policy Analysis** — Upload a PDF and ask any question. Answers are grounded in the document with source citations.
-- ⚖️ **Policy Comparison** — Compare two policies side by side. Full document isolation — answers never cross policy boundaries.
+- ⚖️ **Policy Comparison** — Compare up to three policies side by side. Full document isolation — answers never cross policy boundaries.
 - 💬 **Multi-Document Chat** — Conversational interface across your entire policy library with per-message scope control.
 - 🔒 **Hallucination Prevention** — Strict confidence scoring. If retrieval is weak, the LLM never gets called.
 - 🛡️ **Safety Layer** — Automatically detects medical/legal advice queries and adds appropriate disclaimers.
@@ -45,7 +82,7 @@ It never guesses. If the answer isn't in your policy, it tells you that.
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
 ```
 Your PDF
@@ -67,7 +104,7 @@ Your Question
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.11+
@@ -78,8 +115,8 @@ Your Question
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/policychat.git
-cd policychat
+git clone https://github.com/AkshatParikh16/PolicyChat.git
+cd PolicyChat
 
 # Create and activate virtual environment
 python -m venv venv
@@ -124,7 +161,7 @@ python policychat/serve.py
 
 ---
 
-## API
+## 📡 API
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -139,7 +176,7 @@ Interactive docs at **http://localhost:8000/docs**
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -153,10 +190,10 @@ Interactive docs at **http://localhost:8000/docs**
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-policychat/
+PolicyChat/
 ├── app/
 │   ├── main.py               # FastAPI routes
 │   ├── pipeline.py           # Core orchestration
@@ -170,16 +207,11 @@ policychat/
 ├── policychat/
 │   ├── index.html            # Frontend SPA
 │   └── serve.py              # Static file server
+├── assets/                   # Screenshots
 ├── run.py
 └── requirements.txt
 ```
 
 ---
 
-## License
-
-MIT — see [LICENSE](LICENSE)
-
----
-
-<p align="center">Built by <strong>Akshat</strong> · MS Data Science, UT Arlington</p>
+<p align="center">Built by <strong>Akshat Parikh</strong> · MS Data Science, UT Arlington</p>
