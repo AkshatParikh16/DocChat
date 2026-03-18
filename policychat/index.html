@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PolicyChat — Insurance Intelligence</title>
+<title>DocChat — Document Intelligence</title>
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 <style>
@@ -1265,13 +1265,13 @@ select.input option {
   <div class="nav-logo">
     <div class="nav-logo-mark">🛡️</div>
     <div class="nav-logo-text">
-      <span class="nav-logo-name">PolicyChat</span>
-      <span class="nav-logo-tag">Insurance Intelligence</span>
+      <span class="nav-logo-name">DocChat</span>
+      <span class="nav-logo-tag">Document Intelligence</span>
     </div>
   </div>
   <div class="nav-links">
     <a class="nav-link active" onclick="navScrollTo('hero')">Home</a>
-    <a class="nav-link" onclick="navScrollTo('analysis')">Policy Analysis</a>
+    <a class="nav-link" onclick="navScrollTo('analysis')">Document Analysis</a>
     <a class="nav-link" onclick="navScrollTo('comparison')">Comparison</a>
     <a class="nav-link" onclick="navScrollTo('chat')">Multi-Doc Chat</a>
     <a class="nav-link" onclick="navScrollTo('architecture')">Architecture</a>
@@ -1300,7 +1300,7 @@ select.input option {
         <span class="hero-h1-line2">powered by AI</span>
       </h1>
       <p class="hero-tagline">
-        Ask any question about your policy. Get precise, source-grounded answers
+        Ask any question about your document. Get precise, source-grounded answers
         drawn directly from your documents — never from guesswork.
       </p>
       <div class="hero-actions">
@@ -1348,14 +1348,14 @@ select.input option {
       <div class="feature-card">
         <span class="feature-card-num">Module 01</span>
         <div class="feature-card-icon">🔍</div>
-        <div class="feature-card-title">Policy Analysis</div>
-        <div class="feature-card-desc">Upload any insurance document and ask questions in plain language. Every answer is grounded in your policy text with source citations.</div>
+        <div class="feature-card-title">Document Analysis</div>
+        <div class="feature-card-desc">Upload any insurance document and ask questions in plain language. Every answer is grounded in your document text with source citations.</div>
       </div>
       <div class="feature-card">
         <span class="feature-card-num">Module 02</span>
         <div class="feature-card-icon">⚖️</div>
-        <div class="feature-card-title">Policy Comparison</div>
-        <div class="feature-card-desc">Compare up to three insurance policies side by side. Each document is queried in strict isolation — answers never cross policy boundaries.</div>
+        <div class="feature-card-title">Document Comparison</div>
+        <div class="feature-card-desc">Compare up to three document side by side. Each document is queried in strict isolation — answers never cross policy boundaries.</div>
       </div>
       <div class="feature-card">
         <span class="feature-card-num">Module 03</span>
@@ -1370,14 +1370,14 @@ select.input option {
 <div class="sep"></div>
 
 <!-- ═══════════════════════════════════════════
-     POLICY ANALYSIS
+     Document Analysis
 ═══════════════════════════════════════════ -->
 <section id="analysis">
 <div class="app-section-wrap">
   <div class="app-section-header reveal">
     <span class="section-eyebrow">Module 01</span>
-    <h2 class="section-h2">Policy Analysis</h2>
-    <p class="section-sub">Upload your policy and ask anything. Answers are drawn directly from the document you provide.</p>
+    <h2 class="section-h2">Document Analysis</h2>
+    <p class="section-sub">Upload your document and ask anything. Answers are drawn directly from the document you provide.</p>
   </div>
 
   <div style="display:grid;grid-template-columns:360px 1fr;gap:24px;align-items:start;" class="reveal reveal-delay-1">
@@ -1471,8 +1471,8 @@ select.input option {
       <div class="chat-topbar">
         <div class="chat-topbar-avatar">🛡</div>
         <div class="chat-topbar-info">
-          <div class="chat-topbar-info-name">PolicyChat Analyst</div>
-          <div class="chat-topbar-info-sub">Ask anything about your policy</div>
+          <div class="chat-topbar-info-name">DocChat Analyst</div>
+          <div class="chat-topbar-info-sub">Ask anything about your document</div>
         </div>
         <div class="chat-status-dot"></div>
       </div>
@@ -1485,7 +1485,7 @@ select.input option {
       </div>
       <div class="chat-inputbar">
         <input class="input" type="text" id="analysis-input"
-          placeholder="Ask anything about your policy…"
+          placeholder="Ask anything about your document…"
           onkeydown="if(event.key==='Enter') sendAnalysisQuery()" />
         <button class="btn btn-accent" id="analysis-send-btn" onclick="sendAnalysisQuery()" style="min-width:120px;">
           <span class="spinner" id="analysis-send-spinner"></span>
@@ -1500,14 +1500,14 @@ select.input option {
 <div class="sep"></div>
 
 <!-- ═══════════════════════════════════════════
-     POLICY COMPARISON
+     Document Comparison
 ═══════════════════════════════════════════ -->
 <section id="comparison">
 <div class="section-bg-alt">
 <div class="compare-inner">
   <div class="app-section-header reveal">
     <span class="section-eyebrow">Module 02</span>
-    <h2 class="section-h2">Policy Comparison</h2>
+    <h2 class="section-h2">Document Comparison</h2>
     <p class="section-sub">Select up to three policies and compare them on any question — each queried in complete isolation.</p>
   </div>
 
@@ -1623,7 +1623,7 @@ select.input option {
   <div class="app-section-header reveal">
     <span class="section-eyebrow">Module 03</span>
     <h2 class="section-h2">Multi-Document Chat</h2>
-    <p class="section-sub">Persistent conversation across your policy library with strict document isolation.</p>
+    <p class="section-sub">Persistent conversation across your document library with strict document isolation.</p>
   </div>
 
   <div style="display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:start;" class="reveal reveal-delay-1">
@@ -1676,7 +1676,7 @@ select.input option {
       <div class="chat-topbar">
         <div class="chat-topbar-avatar">🛡</div>
         <div class="chat-topbar-info">
-          <div class="chat-topbar-info-name">PolicyChat</div>
+          <div class="chat-topbar-info-name">DocChat</div>
           <div class="chat-topbar-info-sub" id="chat-context-label">All documents active</div>
         </div>
         <div class="chat-status-dot"></div>
@@ -1768,7 +1768,7 @@ select.input option {
     </div>
     <div class="tech-card">
       <div class="tech-card-title">Local Inference</div>
-      <div class="tech-card-desc">The AI model runs entirely on your infrastructure. Your policy documents never leave your machine or reach any external server.</div>
+      <div class="tech-card-desc">The AI model runs entirely on your infrastructure. your document documents never leave your machine or reach any external server.</div>
     </div>
     <div class="tech-card">
       <div class="tech-card-title">Document Isolation</div>
@@ -1788,8 +1788,8 @@ select.input option {
   <div class="footer-logo">
     <div class="footer-logo-mark">🛡️</div>
     <div>
-      <div class="footer-logo-name">PolicyChat</div>
-      <div class="footer-logo-tag">Insurance Intelligence</div>
+      <div class="footer-logo-name">DocChat</div>
+      <div class="footer-logo-tag">Document Intelligence</div>
     </div>
   </div>
   <div class="footer-right">Your documents. Your answers. Zero guesswork.</div>
@@ -1932,7 +1932,7 @@ document.querySelectorAll('.upload-zone').forEach(zone => {
 });
 
 // ═══════════════════════════════════════════════
-// POLICY ANALYSIS
+// Document Analysis
 // ═══════════════════════════════════════════════
 function handleAnalysisUpload(e) {
   const file = e.target.files[0];
@@ -2365,7 +2365,7 @@ function appendMessage(containerId, role, text, meta) {
       <div class="msg-avatar bot">🛡</div>
       <div class="msg-bubble bot">
         <div class="msg-header">
-          <span class="msg-sender">PolicyChat</span>
+          <span class="msg-sender">DocChat</span>
           <span class="badge ${badgeCls}">${badgeTxt}</span>
         </div>
         <div>${escHtml(text)}</div>

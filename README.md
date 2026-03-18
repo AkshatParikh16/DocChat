@@ -1,10 +1,10 @@
 <h1 align="center">
   <br>
-  🛡️ PolicyChat
+  🤖 DocChat
   <br>
 </h1>
 
-<h4 align="center">AI-powered insurance policy analysis. Ask anything. Get grounded answers — directly from your documents.</h4>
+<h4 align="center">AI-powered document intelligence. Ask anything. Get grounded answers — directly from your documents.</h4>
 
 <br>
 
@@ -26,11 +26,11 @@
 
 ---
 
-## What is PolicyChat?
+## What is DocChat?
 
-PolicyChat is an end-to-end **RAG (Retrieval-Augmented Generation)** system built for insurance document intelligence. Upload any policy PDF, ask questions in plain English, and get precise answers pulled directly from your document — with source citations.
+DocChat is an end-to-end **RAG (Retrieval-Augmented Generation)** system for intelligent document analysis. Upload any PDF, ask questions in plain English, and get precise answers pulled directly from your document — with source citations.
 
-It never guesses. If the answer isn't in your policy, it tells you that.
+It never guesses. If the answer isn't in your document, it tells you that.
 
 ---
 
@@ -50,11 +50,11 @@ It never guesses. If the answer isn't in your policy, it tells you that.
   <tr>
     <td align="center" width="50%">
       <img src="assets/ss3.png" width="100%" />
-      <br><sub><b>Policy Analysis</b></sub>
+      <br><sub><b>Document Analysis</b></sub>
     </td>
     <td align="center" width="50%">
       <img src="assets/ss4.png" width="100%" />
-      <br><sub><b>Policy Comparison</b></sub>
+      <br><sub><b>Document Comparison</b></sub>
     </td>
   </tr>
   <tr>
@@ -73,11 +73,11 @@ It never guesses. If the answer isn't in your policy, it tells you that.
 
 ## ✨ Features
 
-- 📄 **Policy Analysis** — Upload a PDF and ask any question. Answers are grounded in the document with source citations.
-- ⚖️ **Policy Comparison** — Compare up to three policies side by side. Full document isolation — answers never cross policy boundaries.
-- 💬 **Multi-Document Chat** — Conversational interface across your entire policy library with per-message scope control.
+- 📄 **Document Analysis** — Upload any PDF and ask questions. Answers are grounded in the document with source citations.
+- ⚖️ **Document Comparison** — Compare multiple documents side by side. Full document isolation — answers never cross boundaries.
+- 💬 **Multi-Document Chat** — Conversational interface across your entire document library with per-message scope control.
 - 🔒 **Hallucination Prevention** — Strict confidence scoring. If retrieval is weak, the LLM never gets called.
-- 🛡️ **Safety Layer** — Automatically detects medical/legal advice queries and adds appropriate disclaimers.
+- 🛡️ **Safety Layer** — Automatically detects high-risk queries and adds appropriate disclaimers.
 - 🏠 **Fully Local** — LLM runs on your machine via Ollama. Documents never leave your device.
 
 ---
@@ -85,7 +85,7 @@ It never guesses. If the answer isn't in your policy, it tells you that.
 ## ⚙️ How It Works
 
 ```
-Your PDF
+Your Document
    │
    ├─► Parse → Chunk (1200 chars) → Embed (all-MiniLM-L6-v2)
    │                                        │
@@ -167,9 +167,9 @@ python policychat/serve.py
 |--------|----------|-------------|
 | `GET` | `/health` | System + Ollama status |
 | `GET` | `/documents` | List indexed documents |
-| `POST` | `/ingest` | Upload a policy document |
+| `POST` | `/ingest` | Upload a document |
 | `POST` | `/query` | Ask a question |
-| `POST` | `/compare` | Compare two policies |
+| `POST` | `/compare` | Compare two documents |
 | `DELETE` | `/document` | Remove a document |
 
 Interactive docs at **http://localhost:8000/docs**
@@ -186,14 +186,14 @@ Interactive docs at **http://localhost:8000/docs**
 | Vector DB | Pinecone Serverless |
 | Keyword Search | BM25 (Okapi variant) |
 | Document Parsing | PyMuPDF, python-docx |
-| Frontend | HTML / CSS|
+| Frontend | HTML / CSS |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-PolicyChat/
+DocChat/
 ├── app/
 │   ├── main.py               # FastAPI routes
 │   ├── pipeline.py           # Core orchestration
