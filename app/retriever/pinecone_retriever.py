@@ -36,16 +36,21 @@ def upsert_chunks(chunks: list[dict]) -> bool:
         
         vectors = []
         for chunk in chunks:
+            meta = chunk["metadata"]
             vectors.append({
                 "id": chunk["chunk_id"],
                 "values": chunk["embedding"],
                 "metadata": {
                     "text": chunk["text"],
-                    "source": chunk["metadata"]["source"],
-                    "file_type": chunk["metadata"]["file_type"],
-                    "chunk_index": chunk["metadata"]["chunk_index"],
-                    "total_chunks": chunk["metadata"]["total_chunks"],
-                    "doc_id": chunk["doc_id"]
+                    "source": meta["source"],
+                    "file_type": meta["file_type"],
+                    "chunk_index": meta["chunk_index"],
+                    "total_chunks": meta.get("total_chunks"),
+                    "doc_id": chunk["doc_id"],
+                    # structural metadata from Docling
+                    "headings": " > ".join(meta.get("headings") or []),
+                    "pages": meta.get("pages") or [],
+                    "chunk_type": meta.get("chunk_type", "text"),
                 }
             })
         
@@ -92,15 +97,20 @@ def search_pinecone(query_embedding: list[float],
         
         chunks = []
         for match in results.matches:
+            m = match.metadata
+            headings_str = m.get("headings", "")
             chunks.append({
                 "chunk_id": match.id,
-                "text": match.metadata.get("text", ""),
+                "text": m.get("text", ""),
                 "score": match.score,
                 "metadata": {
-                    "source": match.metadata.get("source", ""),
-                    "file_type": match.metadata.get("file_type", ""),
-                    "chunk_index": match.metadata.get("chunk_index", 0),
-                    "doc_id": match.metadata.get("doc_id", "")
+                    "source": m.get("source", ""),
+                    "file_type": m.get("file_type", ""),
+                    "chunk_index": m.get("chunk_index", 0),
+                    "doc_id": m.get("doc_id", ""),
+                    "headings": headings_str.split(" > ") if headings_str else [],
+                    "pages": m.get("pages", []),
+                    "chunk_type": m.get("chunk_type", "text"),
                 }
             })
         

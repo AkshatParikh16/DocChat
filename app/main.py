@@ -96,13 +96,13 @@ def list_documents():
 @app.post("/ingest")
 async def ingest(file: UploadFile = File(...)):
     """Upload and index a policy document."""
-    allowed = [".pdf", ".docx", ".txt"]
+    allowed = [".pdf", ".docx", ".pptx", ".txt", ".md", ".png", ".jpg", ".jpeg", ".tiff"]
     ext = os.path.splitext(file.filename)[1].lower()
 
     if ext not in allowed:
         raise HTTPException(
             status_code=400,
-            detail=f"Unsupported file type: {ext}. Allowed: PDF, DOCX, TXT"
+            detail=f"Unsupported file type: {ext}. Allowed: PDF, DOCX, PPTX, TXT, MD, PNG, JPG, JPEG, TIFF"
         )
 
     # Save with REAL filename preserved

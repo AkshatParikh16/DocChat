@@ -3,13 +3,10 @@ uvicorn
 sentence-transformers
 pinecone
 rank-bm25
-pandas
 pydantic
-langchain
-langchain-community
+langchain-text-splitters
 scikit-learn
 python-dotenv
-pdfplumber
-python-docx
+docling
 httpx
 torch
